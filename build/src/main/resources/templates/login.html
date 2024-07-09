@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>LOGIN</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link th:href="@{/css/login.css}" rel="stylesheet">
+</head>
+
+<body>
+	<form name="login_form">
+		<div class="login_form_top">
+			<h1>LOGIN</h1>
+			<p>UserID、Passwordをご入力の上、「LOGIN」ボタンをクリックしてください。</p>
+		</div>
+		<div class="login_form_btm">
+			<input type="id" name="user_id" placeholder="UserID">
+			<input type="password" name="password" placeholder="Password">
+			<input type="submit" name="botton" value="LOGIN">
+		</div>
+	</form>
+</body>
+
+</html>
