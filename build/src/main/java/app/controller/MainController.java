@@ -1,13 +1,12 @@
-package controller;
+package app.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class MainController {
-
-	@GetMapping({ "/login", "/" })
+	@GetMapping("/login")
 	public String getLogin() {
 		return "login";
 	}
@@ -16,5 +15,4 @@ public class MainController {
 	public String postLogin() {
 		return "loginredirect:/main";
 	}
-
 }
