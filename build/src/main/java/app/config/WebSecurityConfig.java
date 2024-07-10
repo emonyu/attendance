@@ -21,7 +21,9 @@ public class WebSecurityConfig {
 				.loginPage("/login")
 				.defaultSuccessUrl("/")
 				.failureUrl("/login?error")
-				.permitAll())
+				.permitAll()
+				.usernameParameter("user_name")
+				.passwordParameter("password"))
 				.logout(logout -> logout
 						.logoutSuccessUrl("/login"))
 				.authorizeHttpRequests(authz -> authz

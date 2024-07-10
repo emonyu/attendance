@@ -19,11 +19,11 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 		this.mapper = mapper;
 	}
 
-	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+	public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
 
-		LoginUser user = mapper.selectByLogin(username);
+		LoginUser user = mapper.selectByLogin(userName);
 		if (user == null) {
-			throw new UsernameNotFoundException("not found :" + username);
+			throw new UsernameNotFoundException("not found :" + userName);
 		}
 
 		return new LoginUserDetails(user);
